@@ -5,12 +5,129 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:id="@+id/drawer"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         ></LinearLayout >
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/toggle_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Toggle Drawer Panel"
+            android:layout_margin="10dp"
+            style="@style/Widget.AppCompat.Button.Colored"></Button>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+android:id="@+id/cuttom_view_title"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:text="Video View"></TextView>
+                        <ssm.learning.session3task.PoemTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/web_view_title"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Web View"></TextView>
+                    <WebView
+                        android:id="@+id/web_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+
+                    </WebView>
+                    <Button
+                        android:id="@+id/load_google"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Load google" android:layout_margin="5dp"
+                        style="@style/Widget.AppCompat.Button.Colored">
+
+                    </Button>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/video_view_title"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:text="Video View"></TextView>
+                        <VideoView
+                            android:id="@+id/video_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+
+                        </VideoView>
+                        <Button
+                            android:id="@+id/load_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Play video" android:layout_margin="5dp"
+                            style="@style/Widget.AppCompat.Button.Colored">
+
+                        </Button>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -54,7 +171,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Show my name"
-            android:layout_margin="8dp">
+            android:layout_margin="8dp"
+            style="@style/Widget.AppCompat.Button.Colored">
 
         </Button>
 
@@ -71,6 +189,15 @@
             android:text="">
 
         </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_margin="5dp"
+            android:text="Creating custom view by extending TextView and set type face to vazir font and show some farsi poem">
+
+        </TextView>
+
+
 
     </LinearLayout>
 
